@@ -97,27 +97,46 @@ class _loginState extends State<login> {
                       height: 60.0,
                     ),
                   ),
-                  RichText(text: TextSpan(
-                    text: "Don't have an account! " ,
-                    style: TextStyle(color: Colors.black87,
-                        fontWeight: FontWeight.bold),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'Register' ,
-                        style: TextStyle(color: Colors.deepPurple,
-                          fontWeight: FontWeight.normal,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an account! ",
+                        style: TextStyle(color: Colors.black87,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.pushNamed(context, 'register_screen');
+                        },
+                        child: Text(
+                          'Register',
+                          style: TextStyle(color: Colors.deepPurple,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
-                      )
+                      ),
                     ],
-                  )),
-
-
+                  )
+                  
+                   // RichText(text: TextSpan(
+                  //   text: "Don't have an account! " ,
+                  //   style: TextStyle(color: Colors.black87,
+                  //       fontWeight: FontWeight.bold),
+                  //   children: <TextSpan>[
+                  //     TextSpan(
+                  //       text: 'Register' ,
+                  //       style: TextStyle(color: Colors.deepPurple,
+                  //         fontWeight: FontWeight.normal,
+                  //       ),
+                  //     )
+                  //   ],
+                  // )),
                 ],
               ),
             ),
           ),
         ),
       );
-
   }
 }
